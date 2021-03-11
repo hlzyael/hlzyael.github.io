@@ -2,7 +2,7 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "com.ironsource.aura.ams",
+    "package_name": "com.ironsource.aura.ams.demo",
     "sha256_cert_fingerprints":
     ["C7:17:2B:FD:82:45:A2:D1:A3:39:CB:9F:94:98:42:8E:DE:61:CF:AA:7F:48:6A:48:9F:0E:D9:E0:DD:1D:76:E1"]
   }
