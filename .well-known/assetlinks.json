@@ -24,5 +24,17 @@
       "sha256_cert_fingerprints":
       ["27:F9:6D:BA:B7:7B:31:F6:95:3E:4C:D2:C2:DE:FE:15:F5:D7:C7:8F:07:3D:D7:16:20:18:EF:47:6B:09:7C:34"]
     }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.aura.oobe.samsung",
+      "sha256_cert_fingerprints":
+      ["CB:B7:F5:EC:19:E2:BB:2F:C4:8C:6B:6D:53:7A:56:01:6C:93:27:2B:3E:B3:0F:5B:BA:30:4D:7E:34:92:77:04"]
+    }
   }
 ]
+
+
+
