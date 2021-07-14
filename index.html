@@ -10,34 +10,28 @@
     <meta property="og:description" content="Your app" />
   </head>
 
-<script>
-
-   function onLoad(){
- 
-     
-       setTimeout(function() {
-     window.location.href = "aura-apps://install_with_dialog?appUUID=" + getParameterByName("appUUID") + "&packageName=" + getParameterByName("packageName");
-   }, 2000);
+    <script>
+        
+         setTimeout(function() {
+    window.location.href = "aura-apps://install_with_dialog?appUUID=" + getParameterByName("appUUID") + "&packageName=" + getParameterByName("packageName");
+  }, 2000);
         
  
-         function getParameterByName(name, url = window.location.href) {
+        function getParameterByName(name, url = window.location.href) {
 
-       name = name.replace(/[\[\]]/g, '\\$&');
+      name = name.replace(/[\[\]]/g, '\\$&');
 
-       var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
 
-         results = regex.exec(url);
+        results = regex.exec(url);
 
-       if (!results) return null;
+      if (!results) return null;
 
-       if (!results[2]) return '';
+      if (!results[2]) return '';
 
-       return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
 
-     }
-
+    }
 
 </script>
 </html>
-
-
