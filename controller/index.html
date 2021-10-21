@@ -1,15 +1,54 @@
 <!DOCTYPE html>
+
 <html>
 <head>
+    <meta charset="utf-8">
+
+    <title>Safe Hybrid App</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/Bridge.js"></script>
+
+    <script>
+
+    function login(){
+Bridge.login("com.snapchat.android");
+//simulate some login operations
+window.setTimeout(
+function(){
+Bridge.login("1");}, 3000);
+    }
+
+    </script>
+
 </head>
+
 <body>
-<script type="text/javascript">
 
-</script>
-<a id="img" class="grey-text text-lighten-3" target="_blank">
-  <img src="https://firebasestorage.googleapis.com/v0/b/foodswiper-d33c1.appspot.com/o/320X480_a.png?alt=media&token=a2ad3959-e916-4c21-9471-2fdc210592eb" class="center" />
-</a>
+<div id="login">
 
-<iframe id="l" width="1" height="1" style="visibility:hidden"></iframe>
+    <h1>LOGIN</h1>
+
+    <form>
+
+        <div class="label">username</div>
+
+        <input type="text" name="username"><br/>
+
+        <div class="label">password</div>
+
+        <input type="password" name="lastname"><br/><br/>
+
+        <button onclick="login()" type="button" class="btn">Login</button>
+
+    </form>
+
+</div>
+
 </body>
+
 </html>
