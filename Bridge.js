@@ -8,8 +8,6 @@ Bridge.login = function(callback){
    data: callback
   }
 }
-     prompt("bridge_key", JSON.stringify(message));
-
 
 var callback = Bridge.callBack = function(cm){
           alert("login success");
