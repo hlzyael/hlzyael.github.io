@@ -9,7 +9,6 @@ Bridge.login = function(callback){
   }
 }
      prompt("bridge_key", JSON.stringify(message));
-}
 
 
 var callback = Bridge.callBack = function(cm){
