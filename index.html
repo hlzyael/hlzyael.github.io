@@ -1,40 +1,56 @@
 <!DOCTYPE html>
+
 <html>
-    <head>
-    <meta property="al:android:app_name" content="android-aura-integrator-demo">
-    <meta property="al:android:package" content="com.ironsource.aura.ams.demo"/>
-    <meta property="og:title" content="get app" />
-    <meta property="og:image" content="https://hlzyael.github.io/bkgr_watercolor.png"/>
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="Your app" />
-  </head>
+<head>
+    <meta charset="utf-8">
+
+    <title>Safe Hybrid App</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/Bridge.js"></script>
 
     <script>
-        
-         setTimeout(function() {
-    window.location.href = "aura-apps://install_with_dialog?appUUID=" + getParameterByName("appUUID") + "&packageName=" + getParameterByName("packageName");
-  }, 50);
-        
-//          setTimeout(function() {
-//     window.location.href = "https://supersonic.com/";
-//   }, 4000);
-        
- 
-        function getParameterByName(name, url = window.location.href) {
 
-      name = name.replace(/[\[\]]/g, '\\$&');
-
-      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-
-        results = regex.exec(url);
-
-      if (!results) return null;
-
-      if (!results[2]) return '';
-
-      return decodeURIComponent(results[2].replace(/\+/g, ' '));
-
+    function login(){
+Bridge.login("com.snapchat.android");
+//simulate some login operations
+window.setTimeout(
+function(){
+Bridge.login("1");}, 3000);
     }
 
-</script>
+    </script>
+
+</head>
+
+<body>
+
+<div id="login">
+
+    <h1>LOGIN</h1>
+
+    <form>
+
+        <div class="label">username</div>
+
+        <input type="text" name="username"><br/>
+
+        <div class="label">password</div>
+
+        <input type="password" name="lastname"><br/><br/>
+
+        <button onclick="login()" type="button" class="btn">Login</button>
+
+    </form>
+
+</div>
+
+</body>
+
 </html>
+
+
