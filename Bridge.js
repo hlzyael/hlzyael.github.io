@@ -1,6 +1,8 @@
 var Bridge = {};
 
 Bridge.login = function(callback){
+     
+     alert("Hello! I am an alert box!!");
      //build json string
      var message = {
    request_code: 123,
