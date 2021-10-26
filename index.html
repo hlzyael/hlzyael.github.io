@@ -1,56 +1,29 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-    <meta charset="utf-8">
-
-    <title>Safe Hybrid App</title>
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-
-    <link rel="stylesheet" href="css/styles.css">
-
-    <script src="Bridge.js"></script>
-
-    <script>
-
-    function login(){
-Bridge.login("com.snapchat.android");
-//simulate some login operations
-window.setTimeout(
-function(){
-Bridge.login("com.snapchat.android");}, 3000);
-    }
-
-    </script>
-
-</head>
-
 <body>
 
-<div id="login">
+<p id="demo" onclick="myFunction()">Click me to change my text color.</p>
 
-    <h1>LOGIN</h1>
+<script>
+    var Bridge = {};
+    
+function myFunction() {
+   alert("Hello! I am an alert box!!");
+     //build json string
+     var message = {
+   request_code: 123,
+   action: "LOAD_OFFER_ASYNC",
+   data: callback
+}
 
-    <form>
-
-        <div class="label">username</div>
-
-        <input type="text" name="username"><br/>
-
-        <div class="label">password</div>
-
-        <input type="password" name="lastname"><br/><br/>
-
-        <button onclick="login()" type="button" class="btn">Login</button>
-
-    </form>
-
-</div>
+var callback = Bridge.callBack = function(cm){
+          alert("login success");
+}
+  
+</script>
 
 </body>
-
 </html>
+
 
 
