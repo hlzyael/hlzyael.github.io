@@ -1,54 +1,18 @@
 <!DOCTYPE html>
 <html>
+<head>
+</head>
 <body>
-
-<p id="demo">Click the button to change the layout of this paragraph</p>
-
-<button onclick="myFunction()">Click Me!</button>
-
-<script>
-  var Bridge = {};
-function myFunction() {
+<script type="text/javascript">
+    window.onload = function () {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const packageName = urlParams.get('packageName');
+    const str1 = 'https://play.google.com/store/apps/details?id=';
+    window.location.href = str1.concat(packageName);
+    };
   
-    
-  let x = document.getElementById("demo");
-  x.style.fontSize = "25px"; 
-  x.style.color = "blue"; 
-    
-   alert("Hello! I am a happy alert box!!");
-     //build json string
-     var message = {
-   request_code: 123,
-   action: "LOAD_OFFER_ASYNC",
-   data: callback
-     }
-     }
-  
-var callback = Bridge.callBack = function(cm){
-          alert("login success");
-}
-
 </script>
-
+<iframe id="l" width="1" height="1" style="visibility:hidden"></iframe>
 </body>
 </html>
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-<body>
-
-  <script type="text/javascript">
-    src="Bridge.js"
-</script>
-
-
-<p id="demo" onclick="Bridge.myFunction()">Click me to change my text color.</p>
-
-</body>
-</html>
-
-
-
- -->
