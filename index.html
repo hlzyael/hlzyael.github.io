@@ -5,13 +5,19 @@
 <body>
 <script type="text/javascript">
     window.onload = function () {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const packageName = urlParams.get('packageName');
-    const str1 = 'https://play.google.com/store/apps/details?id=';
-    window.location.href = str1.concat(packageName);
+    window.location = "http://play.google.com/store/apps/details?id=" + getPackageName());
     };
-  
+
+    function getPackageName() {
+        const url = window.location.search;
+        const urlParams = new URLSearchParams(url);
+        return urlParams.get('packageName');
+    }
+
+
 </script>
+<iframe id="l" width="1" height="1" style="visibility:hidden"></iframe>
 </body>
-</html>
+</html
+
+
